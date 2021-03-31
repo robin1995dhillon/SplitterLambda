@@ -12,8 +12,6 @@ def split_music(src_file, des_dir):
         separator = Separator('spleeter:2stems')
         separator.separate_to_file(src_file, des_dir)
 
-split_music("source/1.mp3","dest")
-
 def lambda_handler(event, context):
     for record in event['Records']:
         bucket = record['s3']['bucket']['name']
